@@ -21,11 +21,20 @@ void PrintIOUs(IOU iouList[]) {
      }
 }
 
+void DeleteIOU(int index, IOU iouList[]) {
+    int iouIndex = index - 1;
+    string temp = iouList[iouIndex].title;
+    iouList[iouIndex].title = iouList[length - 1].title;
+    iouList[length - 1].title = temp;
+    iouList[length - 1].redeemed = 1;
+}
+
 
 
 int main() {
-   cout << "Downloading any recent changes made to the IOU list:" << endl;
-   system("git pull");
+    cout << "Downloading any recent changes made to the IOU list:" << endl;
+    system("git pull");
+    
     
     IOU drink1("One Drink");
     IOU drink2("One Drink");
@@ -39,13 +48,22 @@ int main() {
     IOU online("One Online Hangout Session");
 
 
-    cout << "Welcome to Brandon's IOU Coupons! This program is meant to help you keep track of which coupons have been redeemed!" << endl;
+    cout << "\n\n\nWelcome to Brandon's IOU Coupons! This program is meant to help you keep track of which coupons have been redeemed!" << endl;
 
 
     IOU availableIOUs[10] = { drink1, drink2, drink3, mongo, car1, car2, car3,
                                 doubleDate, hangout, online };
 
+
     while (1) {
+        int numRedeemed = 0;
+        for (int i = 0; i < 10; i++) {
+            if (availableIOUs[i].redeemed == 1) {
+                numRedeemed++;
+            }
+        }
+        length = length - numRedeemed;
+
         cout << "\n\n\nEnter a number and press enter:"
              << "\n\t1: Available IOUs\n\t2: I would like to redeem a coupon."
              << "\n\t3: Redeemed IOUs\n\t9: Quit" << endl;
@@ -61,6 +79,10 @@ int main() {
             case 2:
                 cout << "\n\n\n\tAvailable coupons to redeem:\n";
                 PrintIOUs(availableIOUs);
+                cout << "\n\nEnter the IOU number you would like to redeem:";
+                int iouNum = -1;
+                cin >> iouNum;
+                DeleteIOU(iouNum, availableIOUs);
 
                 break;
         
