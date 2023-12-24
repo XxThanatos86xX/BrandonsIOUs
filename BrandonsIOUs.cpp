@@ -24,6 +24,9 @@ void PrintIOUs(IOU iouList[]) {
 
 
 int main() {
+   cout << "Downloading any recent changes made to the IOU list:" << endl;
+   system("git pull");
+    
     IOU drink1("One Drink");
     IOU drink2("One Drink");
     IOU drink3("One Drink");
@@ -80,9 +83,10 @@ int main() {
 
     }
 
+    cout << "Updating IOU list:" << endl;
+
     system("git add .");
     system("git commit -m \"updated IOU list\"");
     system("git push");
-    system("git pull");
 
 }
