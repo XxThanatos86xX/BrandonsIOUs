@@ -15,7 +15,7 @@ struct IOU {
 };
 
 void PrintIOUs(IOU iouList[]) {
-     for( int i = 0; i < 10; i++ ) {                                
+     for( int i = 0; i < length; i++ ) {                                
         cout << i + 1;                                             
         cout << ": " + iouList[i].title << endl;
      }
