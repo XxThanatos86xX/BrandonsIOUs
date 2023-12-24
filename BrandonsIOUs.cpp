@@ -64,9 +64,9 @@ int main() {
         //         >> availableIOUs[i].title;
                 cout << line << '\n';
 
-        //     getline (file, line);
+            getline (file, line);
         //     // cin >> availableIOUs[i].redeemed;
-        //     cout << line << '\n';
+            cout << line << '\n';
         //     count++;
         // } 
         // file.close();
