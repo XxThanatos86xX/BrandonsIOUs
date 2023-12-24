@@ -1,10 +1,20 @@
-drink1 0
-drink2 0
-drink3 0
-mongo 0
-car1 0
-car2 0
-car3 0
-doubleDate 0
-hangout 0
-online 0
+One Drink
+0
+One Drink
+0
+One Drink
+0
+One Mongo Meal
+0
+One Car Cleaning
+0
+One Car Cleaning
+0
+One Car Cleaning
+0
+One Double Date
+0
+One Hangout Session
+0
+One Online Hangout Session
+0

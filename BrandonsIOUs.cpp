@@ -8,18 +8,20 @@ using namespace std;
 int length = 10;
 struct IOU {
     string title;
-    int redeemed = 0;
+    int redeemed;
 
+
+    IOU() {}
     IOU(string name) {
         title = name;
     }
 };
 
 void PrintIOUs(IOU iouList[]) {
-     for( int i = 0; i < length; i++ ) {                                
+    for( int i = 0; i < length; i++ ) {                                
         cout << i + 1;                                             
         cout << ": " + iouList[i].title << endl;
-     }
+    }
 }
 
 void DeleteIOU(int index, IOU iouList[]) {
@@ -35,47 +37,58 @@ void DeleteIOU(int index, IOU iouList[]) {
 int main() {
     cout << "Downloading any recent changes made to the IOU list:" << endl;
     system("git pull");
-    
-    
-    IOU drink1("One Drink");
-    IOU drink2("One Drink");
-    IOU drink3("One Drink");
-    IOU mongo("One Mongo Meal");
-    IOU car1("One Car Cleanin");
-    IOU car2("One Car Cleanin");
-    IOU car3("One Car Cleanin");
-    IOU doubleDate("One Double Date");
-    IOU hangout("One Hangout Session");
-    IOU online("One Online Hangout Session");
+
+    IOU iou0;
+    IOU iou1;
+    IOU iou2;
+    IOU iou3;
+    IOU iou4;
+    IOU iou5;
+    IOU iou6;
+    IOU iou7;
+    IOU iou8;
+    IOU iou9;
+
+    IOU availableIOUs[10] = { iou0, iou1, iou2, iou3, iou4, iou5, iou6, iou7, iou8, iou9 };
 
 
     string line;
-    ifstream loadFile ("saveFile.txt");
-    if (loadFile.is_open()) {
-        getline (loadFile, line);
-        cout << line << '\n';
-        loadFile.close();
+    ifstream file ("saveFile.txt");
+    int count = 0;
+    if (file.is_open()) {
+        for ( int i = 0; i < 10; i++ ) {
+            getline (file, line);
+            cin >> availableIOUs[i].title 
+                >> availableIOUs[i].title 
+                >> availableIOUs[i].title 
+                >> availableIOUs[i].title;
+            getline (file, line);
+            cin >> availableIOUs[i].redeemed;
+            // cout << line << '\n';
+            count++;
+        } 
+        file.close();
     } else {
         cout << "Unable to open file";
     }
 
+    length = count;
 
     cout << "\n\n\nWelcome to Brandon's IOU Coupons! This program is meant to help you keep track of which coupons have been redeemed!" << endl;
 
 
-    IOU availableIOUs[10] = { drink1, drink2, drink3, mongo, car1, car2, car3,
-                                doubleDate, hangout, online };
+    // IOU availableIOUs[10] = { drink1, drink2, drink3, mongo, car1, car2, car3,
+    //                             doubleDate, hangout, online };
 
     // IOU availableIOUs[10] = {};
 
-    while (1) {
-        int numRedeemed = 0;
-        for (int i = 0; i < 10; i++) {
-            if (availableIOUs[i].redeemed == 1) {
-                numRedeemed++;
-            }
-        }
-        length = length - numRedeemed;
+    // while (1) {
+    //     for (int i = 0; i < 10; i++) {
+    //         if (availableIOUs[i].redeemed == 1) {
+    //             numRedeemed++;
+    //         }
+    //     }
+    //     length = length - numRedeemed;
 
         cout << "\n\n\nEnter a number and press enter:"
              << "\n\t1: Available IOUs\n\t2: I would like to redeem a coupon."
@@ -114,12 +127,6 @@ int main() {
                 cout << "\n\n\n\tI didn't recognize that command. Please try again.\n";
                 break;
         }
-
-       if (choice == 9) {
-           cout << "Successfully Exited Program!" << endl;
-           break;}
-
-    }
 
     cout << "Updating IOU list:" << endl;
 
