@@ -52,9 +52,8 @@ int main() {
     string line;
     ifstream loadFile ("saveFile.txt");
     if (loadFile.is_open()) {
-        while ( getline (loadFile, line) ) {
+        getline (loadFile, line);
         cout << line << '\n';
-        } 
         loadFile.close();
     } else {
         cout << "Unable to open file";
@@ -67,6 +66,7 @@ int main() {
     IOU availableIOUs[10] = { drink1, drink2, drink3, mongo, car1, car2, car3,
                                 doubleDate, hangout, online };
 
+    // IOU availableIOUs[10] = {};
 
     while (1) {
         int numRedeemed = 0;
