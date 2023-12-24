@@ -1,1 +1,10 @@
-    IOU availableIOUs[10] = { drink1, drink2, drink3, mongo, car1, car2, car3, doubleDate, hangout, online };
+drink1 0
+drink2 0
+drink3 0
+mongo 0
+car1 0
+car2 0
+car3 0
+doubleDate 0
+hangout 0
+online 0
