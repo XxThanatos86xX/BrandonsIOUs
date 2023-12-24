@@ -80,10 +80,13 @@ int main() {
                 cout << "\n\n\n\tAvailable coupons to redeem:\n";
                 PrintIOUs(availableIOUs);
                 cout << "\n\nEnter the IOU number you would like to redeem:";
-                int iouNum = -1;
+                int iouNum;
                 cin >> iouNum;
-                DeleteIOU(iouNum, availableIOUs);
-
+                if (iouNum > 0 && iouNum <= length) {
+                    DeleteIOU(iouNum, availableIOUs);
+                } else {
+                    cout << "Not a valid option. Please start over." << endl;
+                }
                 break;
         
             case 3:
