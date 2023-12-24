@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <stdlib.h>
 #include <string>
 
@@ -46,6 +47,18 @@ int main() {
     IOU doubleDate("One Double Date");
     IOU hangout("One Hangout Session");
     IOU online("One Online Hangout Session");
+
+
+    string line;
+    ifstream loadFile ("saveFile.txt");
+    if (loadFile.is_open()) {
+        while ( getline (loadFile, line) ) {
+        cout << line << '\n';
+        } 
+        loadFile.close();
+    } else {
+        cout << "Unable to open file";
+    }
 
 
     cout << "\n\n\nWelcome to Brandon's IOU Coupons! This program is meant to help you keep track of which coupons have been redeemed!" << endl;
