@@ -52,27 +52,29 @@ int main() {
     IOU availableIOUs[10] = { iou0, iou1, iou2, iou3, iou4, iou5, iou6, iou7, iou8, iou9 };
 
 
-    string line;
-    ifstream file ("saveFile.txt");
-    int count = 0;
-    if (file.is_open()) {
-        for ( int i = 0; i < 10; i++ ) {
-            getline (file, line);
-            cin >> availableIOUs[i].title 
-                >> availableIOUs[i].title 
-                >> availableIOUs[i].title 
-                >> availableIOUs[i].title;
-            getline (file, line);
-            cin >> availableIOUs[i].redeemed;
-            // cout << line << '\n';
-            count++;
-        } 
-        file.close();
-    } else {
-        cout << "Unable to open file";
-    }
+    // string line;
+    // ifstream file ("./saveFile.txt");
+    // int count = 0;
+    // if (file.is_open()) {
+    //     for ( int i = 0; i < 10; i++ ) {
+    //         getline (file, line);
+    //         cin >> availableIOUs[i].title 
+    //             >> availableIOUs[i].title 
+    //             >> availableIOUs[i].title 
+    //             >> availableIOUs[i].title;
+    //             cout << line << '\n';
 
-    length = count;
+    //         getline (file, line);
+    //         cin >> availableIOUs[i].redeemed;
+    //         cout << line << '\n';
+    //         count++;
+    //     } 
+    //     file.close();
+    // } else {
+    //     cout << "Unable to open file";
+    // }
+
+    // length = count;
 
     cout << "\n\n\nWelcome to Brandon's IOU Coupons! This program is meant to help you keep track of which coupons have been redeemed!" << endl;
 
