@@ -55,21 +55,21 @@ int main() {
     string line;
     ifstream file ("./saveFile.txt");
     int count = 0;
-    // if (file.is_open()) {
-    //     for ( int i = 0; i < 10; i++ ) {
-    //         getline (file, line);
-    //         cin >> availableIOUs[i].title 
-    //             >> availableIOUs[i].title 
-    //             >> availableIOUs[i].title 
-    //             >> availableIOUs[i].title;
-    //             cout << line << '\n';
+    if (file.is_open()) {
+        for ( int i = 0; i < 10; i++ ) {
+            getline (file, line);
+            cin >> availableIOUs[i].title 
+                >> availableIOUs[i].title 
+                >> availableIOUs[i].title 
+                >> availableIOUs[i].title;
+                cout << line << '\n';
 
-    //         getline (file, line);
-    //         cin >> availableIOUs[i].redeemed;
-    //         cout << line << '\n';
-    //         count++;
-    //     } 
-    //     file.close();
+            getline (file, line);
+            cin >> availableIOUs[i].redeemed;
+            cout << line << '\n';
+            count++;
+        } 
+        file.close();
     // } else {
     //     cout << "Unable to open file";
     // }
