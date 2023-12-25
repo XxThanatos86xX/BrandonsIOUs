@@ -1,11 +1,11 @@
-14
+13
 One Drink
 0
 One Drink
 0
 One Drink
 0
-One Mongo Meal
+One Outing
 0
 One Car Cleaning
 0
@@ -24,6 +24,4 @@ One Outing
 One Hiking Trip
 0
 One Hiking Trip
-0
-One Outing
 0
