@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int length = 10;
+int length = 15;
 struct IOU {
     string title;
     int redeemed;
