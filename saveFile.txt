@@ -1,5 +1,5 @@
-9
-One Online Hangout Session
+10
+One Drink
 0
 One Drink
 0
@@ -16,4 +16,6 @@ One Car Cleaning
 One Double Date
 0
 One Hangout Session
+0
+One Online Hangout Session
 0
