@@ -94,7 +94,7 @@ int main() {
     while(1) {
         cout << "\n\n\nEnter a number and press enter:"
              << "\n\t1: Available IOUs\n\t2: I would like to redeem a coupon."
-             << "\n\t3: Redeemed IOUs\n\t9: Quit" << endl;
+             << endl;
         int choice = -1;
         cin >> choice;
 
