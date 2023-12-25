@@ -98,6 +98,10 @@ int main() {
         int choice = -1;
         cin >> choice;
 
+        if (choice != 1 || choice != 2 || choice != 9) {
+            cout << "\n\n\nI didn't recognize that command. Please try again.\n";
+            break;
+        }
         switch (choice) {
             case 1:
                 cout << "\n\n\n\tAvailable IOUs:\n";
