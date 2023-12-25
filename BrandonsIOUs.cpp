@@ -79,7 +79,6 @@ int main() {
             getline (file, line);
             // cout << line << '\n';
             availableIOUs[i].redeemed = stoi(line);
-            count++;
         } 
         file.close();
     } 
