@@ -69,15 +69,15 @@ int main() {
             available[i].redeemed = stoi(line);
         //     // cin >> availableIOUs[i].redeemed;
             cout << line << '\n';
-        //     count++;
-        // } 
-        // file.close();
+            count++;
+        } 
+        file.close();
     } 
-    // else {
-    //     cout << "Unable to open file";
-    // }
+    else {
+        cout << "Unable to open file";
+    }
 
-    // length = count;
+    length = count;
 
     cout << "\n\n\nWelcome to Brandon's IOU Coupons! This program is meant to help you keep track of which coupons have been redeemed!" << endl;
 
