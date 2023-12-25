@@ -66,14 +66,17 @@ int main() {
     ifstream file ("saveFile.txt");
     int count = 0;
     if (file.is_open()) {
-        for ( int i = 0; i < 10; i++ ) {
+        getline (file, line);
+        length = stoi(line);        // get length
+
+        for ( int i = 0; i < length; i++ ) {
             getline (file, line);
             availableIOUs[i].title = line;
             // cout << line << '\n';
 
             getline (file, line);
-            availableIOUs[i].redeemed = stoi(line);
             // cout << line << '\n';
+            availableIOUs[i].redeemed = stoi(line);
             count++;
         } 
         file.close();
