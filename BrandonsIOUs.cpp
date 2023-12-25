@@ -30,6 +30,8 @@ void DeleteIOU(int index, IOU iouList[]) {
     iouList[iouIndex].title = iouList[length - 1].title;
     iouList[length - 1].title = temp;
     iouList[length - 1].redeemed = 1;
+
+    length -= 1;
 }
 
 
@@ -95,6 +97,7 @@ int main() {
     //     }
     //     length = length - numRedeemed;
 
+    while(1) {
         cout << "\n\n\nEnter a number and press enter:"
              << "\n\t1: Available IOUs\n\t2: I would like to redeem a coupon."
              << "\n\t3: Redeemed IOUs\n\t9: Quit" << endl;
@@ -132,6 +135,10 @@ int main() {
                 cout << "\n\n\n\tI didn't recognize that command. Please try again.\n";
                 break;
         }
+        if (choice == 9) {
+            break;
+        }
+    }
 
     cout << "Updating IOU list:" << endl;
 
