@@ -117,10 +117,6 @@ int main() {
                 }
                 break;
         
-            case 3:
-                cout << "\n\n\n\tRedeemed IOUs:\n";
-                break;
-
             case 9:
                 cout << "\n\n\nQuitting program..." << endl;
                 break;
