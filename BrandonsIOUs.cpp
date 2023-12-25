@@ -66,7 +66,6 @@ int main() {
 
     string line;
     ifstream file ("saveFile.txt");
-    int count = 0;
     if (file.is_open()) {
         getline (file, line);
         length = stoi(line);        // get length
@@ -85,8 +84,6 @@ int main() {
     else {
         cout << "Unable to open file";
     }
-
-    length = count;
 
     cout << "\n\n\nWelcome to Brandon's IOU Coupons! This program is meant to help you keep track of which coupons have been redeemed!" << endl;
 

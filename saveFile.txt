@@ -1,4 +1,4 @@
-10
+14
 One Drink
 0
 One Drink
@@ -19,13 +19,11 @@ One Hangout Session
 0
 One Hangout Session
 0
-One Online Hangout Session
-0
-One Hiking Trip
-0
-One Hiking Trip
-0
 One Outing
+0
+One Hiking Trip
+0
+One Hiking Trip
 0
 One Outing
 0
