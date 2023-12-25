@@ -16,5 +16,3 @@ One Double Date
 0
 One Hangout Session
 0
-One Drink
-1
