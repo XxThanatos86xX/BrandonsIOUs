@@ -98,7 +98,7 @@ int main() {
         int choice = -1;
         cin >> choice;
 
-        if (choice != 1 || choice != 2 || choice != 9) {
+        if (choice != 1 && choice != 2 && choice != 9) {
             cout << "\n\n\nI didn't recognize that command. Please try again.\n";
             break;
         }
