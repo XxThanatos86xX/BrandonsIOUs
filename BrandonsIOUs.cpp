@@ -32,6 +32,11 @@ void DeleteIOU(int index, IOU iouList[]) {
     iouList[length - 1].redeemed = 1;
 
     length -= 1;
+
+    ofstream file;
+    file.open ("saveFile.txt");
+    file << "Writing this to a file.\n";
+    file.close();
 }
 
 
@@ -61,16 +66,11 @@ int main() {
         for ( int i = 0; i < 10; i++ ) {
             getline (file, line);
             availableIOUs[i].title = line;
-        //     cin >> availableIOUs[i].title 
-        //         // >> availableIOUs[i].title 
-        //         // >> availableIOUs[i].title 
-        //         >> availableIOUs[i].title;
-                cout << line << '\n';
+            // cout << line << '\n';
 
             getline (file, line);
             availableIOUs[i].redeemed = stoi(line);
-        //     // cin >> availableIOUs[i].redeemed;
-            cout << line << '\n';
+            // cout << line << '\n';
             count++;
         } 
         file.close();
@@ -82,20 +82,6 @@ int main() {
     length = count;
 
     cout << "\n\n\nWelcome to Brandon's IOU Coupons! This program is meant to help you keep track of which coupons have been redeemed!" << endl;
-
-
-    // IOU availableIOUs[10] = { drink1, drink2, drink3, mongo, car1, car2, car3,
-    //                             doubleDate, hangout, online };
-
-    // IOU availableIOUs[10] = {};
-
-    // while (1) {
-    //     for (int i = 0; i < 10; i++) {
-    //         if (availableIOUs[i].redeemed == 1) {
-    //             numRedeemed++;
-    //         }
-    //     }
-    //     length = length - numRedeemed;
 
     while(1) {
         cout << "\n\n\nEnter a number and press enter:"
