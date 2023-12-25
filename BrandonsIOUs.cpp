@@ -66,7 +66,7 @@ int main() {
                 cout << line << '\n';
 
             getline (file, line);
-            available[i].redeemed = stoi(line);
+            availableIOUs[i].redeemed = stoi(line);
         //     // cin >> availableIOUs[i].redeemed;
             cout << line << '\n';
             count++;
