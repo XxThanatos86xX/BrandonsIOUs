@@ -35,6 +35,8 @@ void DeleteIOU(int index, IOU iouList[]) {
 
     ofstream file;
     file.open ("saveFile.txt");
+    file << length;
+
     for ( int i = 0; i < length; i++ ) {
         file << iouList[i].title << "\n"
              << iouList[i].redeemed << "\n";
